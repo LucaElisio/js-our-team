@@ -9,7 +9,7 @@ img {
 }
 
 body {
-    background-color: lightpink;
+    background-color: lightskyblue;
 }
 
 h1 {
@@ -17,31 +17,3 @@ h1 {
     padding-top: 50px;
 }
 
-.members {
-    border: 1px solid black;
-    margin: 0 auto;
-    width: 80%;
-    padding: 20px;
-    margin-top: 50px;
-
-    /* debug */
-    /* height: 300px; */
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    margin-bottom: 10px;
-
-}
-
-li {
-    font-size: 2rem;
-    text-align: center;
-}
-
-.person-img {
-    width: 100px;
-}

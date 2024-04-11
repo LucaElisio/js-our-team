@@ -76,31 +76,54 @@ console.log(members);
 
 // Stampo in pagine le informazioni di ogni membro sottoforma di stringhe
 // Cerco elemento members in pagina
-const membersElem = document.querySelector(".members");
-console.log(membersElem);
+// const membersElem = document.querySelector(".members");
+// console.log(membersElem);
+// for (let i = 0; i < members.length; i++) {
+//     // Salvo oggetto corrente in variabile
+//     const curMember = members[i];
+//     console.log(curMember);
+
+//     // Inserisco in pagina una lista
+//     membersElem.innerHTML += `<ul class="person${i}"></ul>`
+
+//     // Trovo elemento ul in pagina
+//     const personElem = document.querySelector(`.person${i}`);
+//     console.log(personElem);
+
+//     // Stampo tutte le chiavi dell'oggetto corrente attraverso for in pagina
+//     for (let key in curMember) {
+//         // console.log(key);
+//         console.log(curMember[key]);
+
+//         // Trasformo la stringa foto in un immagine effettiva
+//         if (key === "foto") {
+//             // console.log("questa è una foto");
+//             personElem.innerHTML += `<li><img src="img/${curMember[key]}" class="person-img"</li>`
+//         } else {
+//             personElem.innerHTML += `<li>${curMember[key]}</li>`
+//         }
+//     }
+// };
+
+
+// Organizzo i singoli membri in card
+const rowMembersElem = document.getElementById("row-members");
+console.log(rowMembersElem);
 for (let i = 0; i < members.length; i++) {
     // Salvo oggetto corrente in variabile
     const curMember = members[i];
     console.log(curMember);
 
-    // Inserisco in pagina una lista
-    membersElem.innerHTML += `<ul class="person${i}"></ul>`
+    rowMembersElem.innerHTML += `
+    <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+            <img src="${"img/" + curMember.foto}" class="card-img-top" id="member-img">
+            <div class="card-body">
+                <h5 class="card-title" id="member-name">${curMember.nome}</h5>
+                <p class="card-text" id="member-rule">${curMember.ruolo}</p>
+            </div>
+        </div>
+    </div>
+    `
 
-    // Trovo elemento ul in pagina
-    const personElem = document.querySelector(`.person${i}`);
-    console.log(personElem);
-
-    // Stampo tutte le chiavi dell'oggetto corrente attraverso for in pagina
-    for (let key in curMember) {
-        // console.log(key);
-        console.log(curMember[key]);
-
-        // Trasformo la stringa foto in un immagine effettiva
-        if (key === "foto") {
-            // console.log("questa è una foto");
-            personElem.innerHTML += `<li><img src="img/${curMember[key]}" class="person-img"</li>`
-        } else {
-            personElem.innerHTML += `<li>${curMember[key]}</li>`
-        }
-    }
 };

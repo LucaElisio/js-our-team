@@ -92,8 +92,15 @@ for (let i = 0; i < members.length; i++) {
 
     // Stampo tutte le chiavi dell'oggetto corrente attraverso for in pagina
     for (let key in curMember) {
+        // console.log(key);
         console.log(curMember[key]);
-        personElem.innerHTML += `<li>${curMember[key]}</li>`
+
+        // Trasformo la stringa foto in un immagine effettiva
+        if (key === "foto") {
+            // console.log("questa è una foto");
+            personElem.innerHTML += `<li><img src="img/${curMember[key]}" class="person-img"</li>`
+        } else {
+            personElem.innerHTML += `<li>${curMember[key]}</li>`
+        }
     }
-    
 };

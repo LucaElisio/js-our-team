@@ -13,8 +13,9 @@ Stampare su console le informazioni di nome, ruolo e la stringa della foto per o
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 1. Utilizzo un ciclo for per scorrere tutti gli oggetti dell'array
 2. Salvo l'oggetto corrente in una variabile
-3. Utilizzo for in per gli oggetti per prendere uno ad uno le chiavi dell'oggetto corrente.
-4. Utilizzo inner.HTML per inserire in pagina i valori della chiave.
+3. Utilizzo inner.HTML per inserire in pagina un ul per ogni oggetto.
+4. Utilizzo for in per gli oggetti per prendere uno ad uno le chiavi dell'oggetto corrente.
+5. Inserisco il valore della chiave corrente dentro li
 
 **BONUS 1** 
 Trasformare la stringa foto in una immagine effettiva

@@ -54,17 +54,46 @@ const members = [
 
 console.log(members);
 
-// Stampo in console le informazioni per ogni membro del team
+///////////////////////////////////////////////////
+
+// // Stampo in console le informazioni per ogni membro del team
+// for (let i = 0; i < members.length; i++) {
+//     // Salvo oggetto corrente in variabile
+//     const curMember = members[i];
+//     console.log(curMember);
+
+//     // Stampo tutte le chiavi dell'oggetto corrente attraverso for in
+//     for (let key in curMember) {
+//         console.log(curMember[key]);
+//     }
+
+//     console.log("----------------------");
+
+// };
+
+///////////////////////////////////////////////////
+
+
+// Stampo in pagine le informazioni di ogni membro sottoforma di stringhe
+// Cerco elemento members in pagina
+const membersElem = document.querySelector(".members");
+console.log(membersElem);
 for (let i = 0; i < members.length; i++) {
     // Salvo oggetto corrente in variabile
     const curMember = members[i];
     console.log(curMember);
 
-    // Stampo tutte le chiavi dell'oggetto corrente attraverso for in
+    // Inserisco in pagina una lista
+    membersElem.innerHTML += `<ul class="person${i}"></ul>`
+
+    // Trovo elemento ul in pagina
+    const personElem = document.querySelector(`.person${i}`);
+    console.log(personElem);
+
+    // Stampo tutte le chiavi dell'oggetto corrente attraverso for in pagina
     for (let key in curMember) {
         console.log(curMember[key]);
+        personElem.innerHTML += `<li>${curMember[key]}</li>`
     }
     
-    console.log("----------------------");
-
 };

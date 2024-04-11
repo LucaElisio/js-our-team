@@ -54,3 +54,17 @@ const members = [
 
 console.log(members);
 
+// Stampo in console le informazioni per ogni membro del team
+for (let i = 0; i < members.length; i++) {
+    // Salvo oggetto corrente in variabile
+    const curMember = members[i];
+    console.log(curMember);
+
+    // Stampo tutte le chiavi dell'oggetto corrente attraverso for in
+    for (let key in curMember) {
+        console.log(curMember[key]);
+    }
+    
+    console.log("----------------------");
+
+};
